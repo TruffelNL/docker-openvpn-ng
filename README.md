@@ -7,7 +7,7 @@ OpenVPN server in a Docker container complete with an EasyRSA PKI CA.
 * GitHub @ [truffelnl/docker-openvpn-ng](https://github.com/truffelnl/docker-openvpn-ng)
 * Docker image @ [ghcr.io/truffelnl/docker-openvpn-ng:master](https://ghcr.io/truffelnl/docker-openvpn-ng:master)
 
-## !! :warning: WARNING :warning: !!
+## :warning: !!WARNING!! :warning:
 
 This container is currently only used as an updated fork from kylemanna/docker-openvpn with an easy to use docker image. I wanted to be able to get the latest Alpine and Openvpn server updates to make use of the security fixes. 
 
