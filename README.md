@@ -5,7 +5,7 @@ OpenVPN server in a Docker container complete with an EasyRSA PKI CA.
 #### Upstream Links
 
 * GitHub @ [truffelnl/docker-openvpn-ng](https://github.com/truffelnl/docker-openvpn-ng)
-* Docker image @ [ghcr.io/truffelnl/docker-openvpn-ng:master](https://ghcr.io/truffelnl/docker-openvpn-ng:master)
+* Docker image @ [ghcr.io/truffelnl/docker-openvpn-ng:latest](https://ghcr.io/truffelnl/docker-openvpn-ng:latest)
 
 ## :warning: !!WARNING!! :warning:
 
