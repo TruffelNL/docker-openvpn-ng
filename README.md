@@ -25,20 +25,20 @@ This container is currently only used as an updated fork from kylemanna/docker-o
   private key used by the newly generated certificate authority.
 
       docker volume create --name $OVPN_DATA
-      docker run -v $OVPN_DATA:/etc/openvpn --rm truffelnl/docker-openvpn-ng ovpn_genconfig -u udp://VPN.SERVERNAME.COM
-      docker run -v $OVPN_DATA:/etc/openvpn --rm -it truffelnl/docker-openvpn-ng ovpn_initpki
+      docker run -v $OVPN_DATA:/etc/openvpn --rm ghcr.io/truffelnl/docker-openvpn-ng ovpn_genconfig -u udp://VPN.SERVERNAME.COM
+      docker run -v $OVPN_DATA:/etc/openvpn --rm -it ghcr.io/truffelnl/docker-openvpn-ng ovpn_initpki
 
 * Start OpenVPN server process
 
-      docker run -v $OVPN_DATA:/etc/openvpn -d -p 1194:1194/udp --cap-add=NET_ADMIN truffelnl/docker-openvpn-ng
+      docker run -v $OVPN_DATA:/etc/openvpn -d -p 1194:1194/udp --cap-add=NET_ADMIN ghcr.io/truffelnl/docker-openvpn-ng
 
 * Generate a client certificate without a passphrase
 
-      docker run -v $OVPN_DATA:/etc/openvpn --rm -it truffelnl/docker-openvpn-ng easyrsa build-client-full CLIENTNAME nopass
+      docker run -v $OVPN_DATA:/etc/openvpn --rm -it ghcr.io/truffelnl/docker-openvpn-ng easyrsa build-client-full CLIENTNAME nopass
 
 * Retrieve the client configuration with embedded certificates
 
-      docker run -v $OVPN_DATA:/etc/openvpn --rm truffelnl/docker-openvpn-ng ovpn_getclient CLIENTNAME > CLIENTNAME.ovpn
+      docker run -v $OVPN_DATA:/etc/openvpn --rm ghcr.io/truffelnl/docker-openvpn-ng ovpn_getclient CLIENTNAME > CLIENTNAME.ovpn
 
 ## Next Steps
 
@@ -63,7 +63,7 @@ If you prefer to use `docker-compose` please refer to the [documentation](docs/d
 
 * Create an environment variable with the name DEBUG and value of 1 to enable debug output (using "docker -e").
 
-        docker run -v $OVPN_DATA:/etc/openvpn -p 1194:1194/udp --cap-add=NET_ADMIN -e DEBUG=1 truffelnl/docker-openvpn-ng
+        docker run -v $OVPN_DATA:/etc/openvpn -p 1194:1194/udp --cap-add=NET_ADMIN -e DEBUG=1 ghcr.io/truffelnl/docker-openvpn-ng
 
 * Test using a client that has openvpn installed correctly
 
@@ -81,7 +81,7 @@ If you prefer to use `docker-compose` please refer to the [documentation](docs/d
 
 ## How Does It Work?
 
-Initialize the volume container using the `truffelnl/docker-openvpn-ng:master` image with the
+Initialize the volume container using the `ghcr.io/truffelnl/docker-openvpn-ng:latest` image with the
 included scripts to automatically generate:
 
 - Diffie-Hellman parameters
