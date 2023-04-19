@@ -8,7 +8,7 @@ services:
   openvpn:
     cap_add:
      - NET_ADMIN
-    image: kylemanna/openvpn
+    image: ghcr.io/truffelnl/docker-openvpn-ng:master
     container_name: openvpn
     ports:
      - "1194:1194/udp"
