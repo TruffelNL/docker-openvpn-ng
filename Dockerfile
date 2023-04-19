@@ -1,7 +1,7 @@
 # Original credit: https://github.com/jpetazzo/dockvpn
 
 # Smallest base image
-FROM alpine:latest
+FROM alpine:edge
 
 LABEL maintainer="TruffelNL <truffelnl@stopmailing.me>"
 
