@@ -67,7 +67,7 @@ fi
 [ -z "$OVPN_NATDEVICE" ] && OVPN_NATDEVICE=eth0
 
 # Setup NAT forwarding if requested
-if [ "$OVPN_DEFROUTE" != "0" ] || [ "$OVPN_NAT" == "1" ] ; then
+if [ "$OVPN_NAT" == "1" ] ; then
 	# call function to setup iptables rules and routing
 	# this allows rules to be customized by supplying
 	# a replacement function in, for example, ovpn_env.sh
